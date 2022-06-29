@@ -108,21 +108,15 @@ body {
   font-style: normal;
   letter-spacing: 0.03em;
 }
-.header {
-  border-bottom: var(--border-line);
-  background: var(--background-header);
-}
 .conteiner {
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  /* outline: 1px solid red; */
 }
 .section {
   padding: 94px 0px;
-  /* background-color: orange; */
 }
 /* ------------- логотип WebStudio -------------*/
 .header {
@@ -131,15 +125,14 @@ body {
   top: 0;
   left: 0;
   z-index: 1;
+
+  border-bottom: var(--border-line);
+  background: var(--background-header);
 }
 .header-navig {
   display: flex;
 }
-.header-nav {
-  display: flex;
-  align-items: center;
-}
-.header-logo {
+.header-navig__logo {
   font-family: 'Raleway';
   font-weight: 700;
   font-size: 26px;
@@ -149,19 +142,23 @@ body {
 
   color: var(--accent-color);
 }
-.header-logoblack {
+.header-navig__logoblack {
   color: var(--primary-text-color);
 }
 
 /* --------------- навігація Студия -------------*/
-.header-item:not(:last-child) {
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+.header-nav__item:not(:last-child) {
   margin-right: 50px;
 }
 /* або через селектор сусіда */
 /* .header .header-item + .header-item {
   margin-left: 50px;
 } */
-.headerlink {
+.header-nav__link {
   position: relative;
 
   padding: 32px 0;
@@ -175,10 +172,10 @@ body {
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
 }
-.headerlink.current {
+.header-nav__link.current {
   color: var(--accent-color);
 }
-.headerlink.current::after {
+.header-nav__link.current::after {
   content: '';
   position: absolute;
   display: block;
@@ -190,7 +187,7 @@ body {
   opacity: 1;
   background-color: var(--accent-color);
 }
-.headerlink::after {
+.header-nav__link::after {
   content: '';
   position: absolute;
   display: block;
@@ -206,8 +203,8 @@ body {
   transform: scaleX(1);
   transition: transform 250ms var(--cubic), opacity 250ms var(--cubic);
 }
-.headerlink:hover::after,
-.headerlink:focus::after {
+.header-nav__link:hover::after,
+.header-nav__link:focus::after {
   content: '';
   position: absolute;
   display: block;
@@ -221,22 +218,19 @@ body {
   opacity: 1;
   transform: scaleX(0);
 }
-.headerlink:hover,
-.headerlink:focus {
+.header-nav__link:hover,
+.header-nav__link:focus {
   color: var(--accent-color);
 }
-
-/*------------------- мейл і тел ---------------*/
-
-.header-contact {
+.header-nav.contact {
   display: flex;
   justify-content: center;
   margin-left: auto;
   align-items: center;
 }
-
-.headermail,
-.headertel {
+/*------------------- мейл і тел ---------------*/
+.header-nav__link--mail,
+.header-nav__link--tel {
   display: inline-flex;
   align-items: center;
   padding: 32px 0;
@@ -251,16 +245,16 @@ body {
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
 }
-.header-icon {
+.header-nav__icon {
   margin-right: 10px;
   fill: currentColor;
 }
-.headermail:hover,
-.headermail:focus {
+.header-nav__link--mail:hover,
+.header-nav__link--mail:focus {
   color: var(--accent-color);
 }
-.headertel:hover,
-.headertel:focus {
+.header-nav__link--tel:hover,
+.header-nav__link--tel:focus {
   color: var(--accent-color);
 }
 

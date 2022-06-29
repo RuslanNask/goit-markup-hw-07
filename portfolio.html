@@ -20,31 +20,35 @@
   <body>
     <!-- шапка сайту -->
     <header class="header">
-      <div class="conteiner header-contact">
+      <div class="conteiner header-nav contact">
         <nav class="header-navig">
-          <a href="" class="header-logo">Web<span class="header-logoblack">Studio</span></a>
+          <a href="" class="header-navig__logo"
+            >Web<span class="header-navig__logoblack">Studio</span></a
+          >
           <ul class="header-nav list">
-            <li class="header-item"><a href="./index.html" class="headerlink">Студия</a></li>
-            <li class="header-item">
-              <a href="./portfolio.html" class="headerlink current">Портфолио</a>
+            <li class="header-nav__item">
+              <a href="./index.html" class="header-nav__link">Студия</a>
             </li>
-            <li class="header-item"><a href="" class="headerlink">Контакты</a></li>
+            <li class="header-nav__item">
+              <a href="./portfolio.html" class="header-nav__link current">Портфолио</a>
+            </li>
+            <li class="header-nav__item"><a href="" class="header-nav__link">Контакты</a></li>
           </ul>
         </nav>
 
         <!-- мейл і тел -->
-        <ul class="header-contact list">
-          <li class="header-item">
-            <a href="mailto:info@devstudio.com" class="headermail"
-              ><svg class="header-icon" width="16px" height="12px">
+        <ul class="header-nav contact list">
+          <li class="header-nav__item">
+            <a href="mailto:info@devstudio.com" class="header-nav__link--mail"
+              ><svg class="header-nav__icon" width="16px" height="12px">
                 <use href="./images/icons.svg#icon-envelope"></use>
               </svg>
               info@devstudio.com
             </a>
           </li>
-          <li class="header-item">
-            <a href="tel:+380961111111" class="headertel"
-              ><svg class="header-icon" width="10px" height="16px">
+          <li class="header-nav__item">
+            <a href="tel:+380961111111" class="header-nav__link--tel"
+              ><svg class="header-nav__icon" width="10px" height="16px">
                 <use href="./images/icons.svg#icon-smartphone"></use>
               </svg>
               +38 096 111 11 11
