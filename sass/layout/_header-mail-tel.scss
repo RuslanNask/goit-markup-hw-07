@@ -1,0 +1,34 @@
+.header-nav.contact {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  align-items: center;
+}
+.header-nav__link--mail,
+.header-nav__link--tel {
+  display: inline-flex;
+  align-items: center;
+  padding: 32px 0;
+  cursor: pointer;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+
+  color: var(--second-text-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic);
+}
+.header-nav__icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+.header-nav__link--mail:hover,
+.header-nav__link--mail:focus {
+  color: var(--accent-color);
+}
+.header-nav__link--tel:hover,
+.header-nav__link--tel:focus {
+  color: var(--accent-color);
+}

@@ -1,0 +1,100 @@
+.ourteam {
+  background: var(--background-ourteam-color);
+}
+.team-item {
+  background-color: var(--background-img-team);
+}
+.ourteam-text {
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+
+  color: var(--primary-text-color);
+}
+/* --------- CARD SET ------ OUR TEAM ---------*/
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+}
+.team-list > .team-item {
+  margin-left: 30px;
+  flex-basis: calc(100% / 4 - 30px);
+}
+/* або сусіди */
+/* .team-list .team-item + .team-item {
+  margin-left: 30px;
+} */
+
+.card {
+  border-radius: var(--border-radius-card-team);
+  box-shadow: var(--box-shadow-ourteam);
+}
+.card-content {
+  text-align: center;
+  padding: 30px 0px;
+}
+.teamtext-big {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.12;
+
+  color: var(--primary-text-color);
+}
+.teamtext-small {
+  margin-bottom: 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.19;
+
+  color: var(--second-text-color);
+}
+.masters-soc {
+  display: flex;
+  justify-content: center;
+}
+.masters-soc-item {
+  width: 44px;
+  height: 44px;
+  margin-left: 10px;
+}
+.masters-soc-item:first-child {
+  margin-left: 0;
+}
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--accent-color-text);
+  color: var(--icon-text);
+
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic);
+}
+.soc-icon {
+  fill: currentColor;
+}
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-color);
+  color: var(--accent-color-text);
+}
+/* ----------- або такий варіант ------------------- */
+/* .soc-icon {
+  fill: var(--icon-text);
+}
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-color);
+}
+.social-link:hover .soc-icon,
+.social-link:focus .soc-icon {
+  fill: var(--accent-color-text);
+} */
