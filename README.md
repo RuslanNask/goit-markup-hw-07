@@ -7,6 +7,7 @@
           2*3 + 0 = 6   2*3 + 1 = 7
 
 ------------- для БЕМа ------------------
+settings.json
 {
   "liveSassCompile.settings.formats": [
     {
