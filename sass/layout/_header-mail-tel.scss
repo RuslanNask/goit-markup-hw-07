@@ -19,16 +19,13 @@
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 .header-nav__icon {
   margin-right: 10px;
   fill: currentColor;
-}
-.header-nav__link--mail:hover,
-.header-nav__link--mail:focus {
-  color: var(--accent-color);
-}
-.header-nav__link--tel:hover,
-.header-nav__link--tel:focus {
-  color: var(--accent-color);
 }

@@ -230,20 +230,15 @@ body {
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
 }
+.header-nav__link--mail:hover, .header-nav__link--mail:focus,
+.header-nav__link--tel:hover,
+.header-nav__link--tel:focus {
+  color: var(--accent-color);
+}
 
 .header-nav__icon {
   margin-right: 10px;
   fill: currentColor;
-}
-
-.header-nav__link--mail:hover,
-.header-nav__link--mail:focus {
-  color: var(--accent-color);
-}
-
-.header-nav__link--tel:hover,
-.header-nav__link--tel:focus {
-  color: var(--accent-color);
 }
 
 .hero {
@@ -299,9 +294,7 @@ body {
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
 }
-
-.button-zakaz:hover,
-.button-zakaz:focus {
+.button-zakaz:hover, .button-zakaz:focus {
   color: var(--accent-color-text);
   background-color: var(--background-buttom-zakaz-hover);
 }
@@ -640,14 +633,12 @@ body {
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
 }
+.footer-soc-link:hover, .footer-soc-link:focus {
+  background-color: var(--accent-color);
+}
 
 .footer-soc-icon {
   fill: currentColor;
-}
-
-.footer-soc-link:hover,
-.footer-soc-link:focus {
-  background-color: var(--accent-color);
 }
 
 .footer-secondary {
@@ -685,16 +676,13 @@ body {
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
 }
-
+.footer-input:hover, .footer-input:focus {
+  background-color: var(--accent-color);
+}
 .footer-input::placeholder {
   font-size: 16px;
   line-height: 1.25;
   color: rgba(255, 255, 255, 0.6);
-}
-
-.footer-input:hover,
-.footer-input:focus {
-  background-color: var(--accent-color);
 }
 
 .input-text {
@@ -728,9 +716,7 @@ body {
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
 }
-
-.button-input:hover,
-.button-input:focus {
+.button-input:hover, .button-input:focus {
   color: var(--accent-color-text);
   background-color: var(--background-buttom-zakaz-hover);
 }
@@ -750,15 +736,10 @@ body {
   background-color: var(--modal-bcg);
   transition: opacity 250ms var(--cubic), visibility 250ms var(--cubic);
 }
-
 .backdrop.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-}
-
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0) rotate(360deg);
 }
 
 .modal {
@@ -774,7 +755,9 @@ body {
   transform: translate(-50%, -50%) scale(1) rotate(0);
   transition: transform 250ms var(--cubic);
 }
-
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0) rotate(360deg);
+}
 .modal-title {
   font-weight: 700;
   font-size: 20px;
@@ -801,9 +784,7 @@ body {
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
 }
-
-.btn-modal-close:hover,
-.btn-modal-close:focus {
+.btn-modal-close:hover, .btn-modal-close:focus {
   fill: var(--accent-color);
   border-color: var(--accent-color);
 }
@@ -833,9 +814,7 @@ body {
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
 }
-
-.btn-otprav:hover,
-.btn-otprav:focus {
+.btn-otprav:hover, .btn-otprav:focus {
   color: var(--accent-color-text);
   background-color: var(--background-buttom-zakaz-hover);
 }
@@ -849,13 +828,8 @@ body {
 .form-field {
   margin-top: 10px;
 }
-
 .form-field:first-child {
   margin-top: 0;
-}
-
-.check {
-  margin-top: 20px;
 }
 
 .form-label {
@@ -865,6 +839,10 @@ body {
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: var(--second-text-color);
+}
+
+.check {
+  margin-top: 20px;
 }
 
 .input-wrap {
@@ -895,14 +873,10 @@ body {
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
 }
-
-.form-input:hover,
-.form-input:focus {
+.form-input:hover, .form-input:focus {
   border-color: var(--background-buttom-accent);
 }
-
-.form-input:hover + .form-icon,
-.form-input:focus + .form-icon {
+.form-input:hover + .form-icon, .form-input:focus + .form-icon {
   fill: var(--accent-color);
 }
 
@@ -921,16 +895,13 @@ body {
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
 }
-
 .form-field textarea::placeholder {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-
-.form-field textarea:hover,
-.form-field textarea:focus {
+.form-field textarea:hover, .form-field textarea:focus {
   border-color: var(--background-buttom-accent);
 }
 
@@ -958,17 +929,15 @@ body {
   border: 1px solid #212121;
   border-radius: 2px;
 }
-
-.check-icon {
-  fill: transparent;
-}
-
 .input-check:checked + .check-text span {
   background: var(--accent-color);
   border-radius: 2px;
   border: none;
 }
 
+.check-icon {
+  fill: transparent;
+}
 .input-check:checked + .check-text .check-icon {
   fill: var(--accent-color-text);
 }

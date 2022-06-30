@@ -74,14 +74,16 @@
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
 }
 .footer-soc-icon {
   fill: currentColor;
 }
-.footer-soc-link:hover,
-.footer-soc-link:focus {
-  background-color: var(--accent-color);
-}
+
 .footer-secondary {
   margin-left: 70px;
 }
@@ -115,16 +117,18 @@
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
+  &::placeholder {
+    font-size: 16px;
+    line-height: calc(20 / 16);
+    color: rgba(255, 255, 255, 0.6);
+  }
 }
-.footer-input::placeholder {
-  font-size: 16px;
-  line-height: calc(20 / 16);
-  color: rgba(255, 255, 255, 0.6);
-}
-.footer-input:hover,
-.footer-input:focus {
-  background-color: var(--accent-color);
-}
+
 .input-text {
   font-weight: 700;
   line-height: 1.14;
@@ -156,11 +160,12 @@
   transition-property: background-color, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
-}
-.button-input:hover,
-.button-input:focus {
-  color: var(--accent-color-text);
-  background-color: var(--background-buttom-zakaz-hover);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color-text);
+    background-color: var(--background-buttom-zakaz-hover);
+  }
 }
 .icon-send {
   margin-left: 10px;

@@ -21,9 +21,10 @@
   transition-property: background-color, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
-}
-.button-zakaz:hover,
-.button-zakaz:focus {
-  color: var(--accent-color-text);
-  background-color: var(--background-buttom-zakaz-hover);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color-text);
+    background-color: var(--background-buttom-zakaz-hover);
+  }
 }

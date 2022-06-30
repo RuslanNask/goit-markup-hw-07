@@ -9,14 +9,12 @@
 
   background-color: var(--modal-bcg);
   transition: opacity 250ms var(--cubic), visibility 250ms var(--cubic);
-}
-.backdrop.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0) rotate(360deg);
+
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
 }
 .modal {
   position: absolute;
@@ -32,15 +30,20 @@
 
   transform: translate(-50%, -50%) scale(1) rotate(0);
   transition: transform 250ms var(--cubic);
-}
-.modal-title {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: calc(23 / 20);
-  text-align: center;
 
-  color: var(--primary-text-color);
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(0) rotate(360deg);
+  }
+  &-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: calc(23 / 20);
+    text-align: center;
+
+    color: var(--primary-text-color);
+  }
 }
+
 .btn-modal-close {
   position: absolute;
   right: 8px;
@@ -58,11 +61,12 @@
   transition-property: var(--background-buttom-accent);
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
-}
-.btn-modal-close:hover,
-.btn-modal-close:focus {
-  fill: var(--accent-color);
-  border-color: var(--accent-color);
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+    border-color: var(--accent-color);
+  }
 }
 
 .btn-otprav {
@@ -93,12 +97,14 @@
   transition-property: background-color, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color-text);
+    background-color: var(--background-buttom-zakaz-hover);
+  }
 }
-.btn-otprav:hover,
-.btn-otprav:focus {
-  color: var(--accent-color-text);
-  background-color: var(--background-buttom-zakaz-hover);
-}
+
 .form {
   margin-left: auto;
   margin-right: auto;
@@ -106,13 +112,11 @@
 }
 .form-field {
   margin-top: 10px;
+  &:first-child {
+    margin-top: 0;
+  }
 }
-.form-field:first-child {
-  margin-top: 0;
-}
-.check {
-  margin-top: 20px;
-}
+
 .form-label {
   display: block;
   text-align: start;
@@ -120,6 +124,9 @@
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: var(--second-text-color);
+}
+.check {
+  margin-top: 20px;
 }
 .input-wrap {
   position: relative;
@@ -148,15 +155,18 @@
   transition-property: border-color;
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
+
+  &:hover,
+  &:focus {
+    border-color: var(--background-buttom-accent);
+  }
+
+  &:hover + .form-icon,
+  &:focus + .form-icon {
+    fill: var(--accent-color);
+  }
 }
-.form-input:hover,
-.form-input:focus {
-  border-color: var(--background-buttom-accent);
-}
-.form-input:hover + .form-icon,
-.form-input:focus + .form-icon {
-  fill: var(--accent-color);
-}
+
 .form-field textarea {
   display: block;
   margin-top: 4px;
@@ -173,18 +183,20 @@
   transition-property: border-color;
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
-}
-.form-field textarea::placeholder {
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
 
-  color: rgba(117, 117, 117, 0.5);
+  &::placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+
+    color: rgba(117, 117, 117, 0.5);
+  }
+  &:hover,
+  &:focus {
+    border-color: var(--background-buttom-accent);
+  }
 }
-.form-field textarea:hover,
-.form-field textarea:focus {
-  border-color: var(--background-buttom-accent);
-}
+
 .check-text {
   display: flex;
   justify-content: center;
@@ -206,18 +218,20 @@
   margin-right: 8.38px;
   border: 1px solid #212121;
   border-radius: 2px;
+
+  .input-check:checked + & {
+    background: var(--accent-color);
+    border-radius: 2px;
+    border: none;
+  }
 }
 .check-icon {
   fill: transparent;
+  .input-check:checked + .check-text & {
+    fill: var(--accent-color-text);
+  }
 }
-.input-check:checked + .check-text span {
-  background: var(--accent-color);
-  border-radius: 2px;
-  border: none;
-}
-.input-check:checked + .check-text .check-icon {
-  fill: var(--accent-color-text);
-}
+
 .input-check:focus + .check-text span {
   border-color: var(--background-buttom-accent);
 }
