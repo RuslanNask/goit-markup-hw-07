@@ -77,15 +77,17 @@
   transition-property: color, background-color;
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: var(--accent-color-text);
+  }
 }
 .soc-icon {
   fill: currentColor;
 }
-.social-link:hover,
-.social-link:focus {
-  background-color: var(--accent-color);
-  color: var(--accent-color-text);
-}
+
 /* ----------- або такий варіант ------------------- */
 /* .soc-icon {
   fill: var(--icon-text);

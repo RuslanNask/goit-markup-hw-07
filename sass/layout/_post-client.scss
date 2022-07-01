@@ -32,12 +32,13 @@
   transition-property: color, border;
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
+
+  &:hover,
+  &:focus {
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+  }
 }
 .client-icon {
   fill: currentColor;
-}
-.client-link:hover,
-.client-link:focus {
-  border: 1px solid var(--accent-color);
-  color: var(--accent-color);
 }

@@ -155,24 +155,6 @@ body {
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
 }
-
-.header-nav__link.current {
-  color: var(--accent-color);
-}
-
-.header-nav__link.current::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 4px;
-  left: 0;
-  bottom: -1px;
-  border-radius: 2px;
-  opacity: 1;
-  background-color: var(--accent-color);
-}
-
 .header-nav__link::after {
   content: "";
   position: absolute;
@@ -188,9 +170,7 @@ body {
   transform: scaleX(1);
   transition: transform 250ms var(--cubic), opacity 250ms var(--cubic);
 }
-
-.header-nav__link:hover::after,
-.header-nav__link:focus::after {
+.header-nav__link:hover::after, .header-nav__link:focus::after {
   content: "";
   position: absolute;
   display: block;
@@ -202,6 +182,22 @@ body {
   background-color: var(--accent-color);
   opacity: 1;
   transform: scaleX(0);
+}
+
+.header-nav__link.current {
+  color: var(--accent-color);
+}
+.header-nav__link.current::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 4px;
+  left: 0;
+  bottom: -1px;
+  border-radius: 2px;
+  opacity: 1;
+  background-color: var(--accent-color);
 }
 
 .header-nav__link:hover,
@@ -481,15 +477,13 @@ body {
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
 }
+.social-link:hover, .social-link:focus {
+  background-color: var(--accent-color);
+  color: var(--accent-color-text);
+}
 
 .soc-icon {
   fill: currentColor;
-}
-
-.social-link:hover,
-.social-link:focus {
-  background-color: var(--accent-color);
-  color: var(--accent-color-text);
 }
 
 /* ----------- або такий варіант ------------------- */
@@ -538,15 +532,13 @@ body {
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
 }
+.client-link:hover, .client-link:focus {
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+}
 
 .client-icon {
   fill: currentColor;
-}
-
-.client-link:hover,
-.client-link:focus {
-  border: 1px solid var(--accent-color);
-  color: var(--accent-color);
 }
 
 .footer {
@@ -961,4 +953,132 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   border: none;
-} *//*# sourceMappingURL=main.css.map */
+} */
+/*--------------- фильтр -----------*/
+.filter-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.filter {
+  display: flex;
+  margin-bottom: 50px;
+  border-radius: 4px;
+  justify-content: center;
+}
+
+.buttons {
+  margin-bottom: 0;
+  padding: 6px 22px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  cursor: pointer;
+  border: 0px solid transparent;
+  color: var(--primary-text-color);
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic);
+}
+.buttons:hover, .buttons:focus {
+  box-shadow: var(--box-shadow);
+  color: var(--accent-color-text);
+  background-color: var(--background-buttom-accent);
+}
+
+.buttons:active {
+  box-shadow: var(--box-shadow);
+  color: var(--accent-color-text);
+  background-color: var(--background-buttom-accent);
+}
+
+.buttons.current {
+  color: var(--accent-color-text);
+  background-color: var(--accent-color);
+}
+
+/* ------------ PROJECT - SITKA -----------*/
+.project {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--box-cards-gap));
+  margin-top: calc(-1 * var(--box-cards-gap));
+}
+
+.project > .box-cards {
+  margin-left: var(--box-cards-gap);
+  margin-top: var(--box-cards-gap);
+  flex-basis: calc(33.3333333333% - var(--box-cards-gap));
+  background: var(--background-box);
+  border: var(--border-card-project-line);
+}
+
+.box-cards .link {
+  display: block;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic);
+}
+.box-cards .link:hover, .box-cards .link:focus {
+  box-shadow: var(--box-shadow-card-project);
+}
+
+.project-thunb {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-subtext {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  font-size: 18px;
+  line-height: 1.56;
+  padding: 63px 24px;
+  overflow: auto;
+  color: var(--accent-color-text);
+  background: var(--project-bgc-overlay);
+  transform: translateY(101%);
+  transition: transform 250ms linear;
+}
+.box-cards:hover .project-subtext, .box-cards:focus .project-subtext {
+  transform: translateY(0);
+}
+
+/*------- або ---- PROJECT - SITKA ----- по-іншому --------*/
+/* .project {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+.project > .box-cards {
+  margin: 15px;
+  flex-basis: calc(100% / 3 - 30px);
+  background: var(--background-box);
+  border: var(--border-card-project-line);
+} */
+/*------- або ---- PROJECT - SITKA ----- gap ( Gutter) --------*/
+/* .project {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+} */
+/*------------------ CARD SET PROJECT ---------------*/
+.card-content-project {
+  padding: 20px 24px;
+}
+
+.project-big {
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--primary-text-color);
+}
+
+.project-small {
+  font-size: 16px;
+  line-height: 1.87;
+  color: var(--second-text-color);
+}/*# sourceMappingURL=main.css.map */
