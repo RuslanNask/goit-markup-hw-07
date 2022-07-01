@@ -296,18 +296,18 @@ body {
   background-color: var(--background-buttom-zakaz-hover);
 }
 
-.title-list {
+.special__list {
   display: flex;
   flex-wrap: wrap;
   margin-left: calc(-1 * var(--box-cards-gap));
 }
 
-.title-list > .special-item {
+.special__list > .special__item {
   margin-left: var(--box-cards-gap);
   flex-basis: calc(25% - var(--box-cards-gap));
 }
 
-.special-item::before {
+.special__item::before {
   display: block;
   content: "";
   height: 120px;
@@ -334,7 +334,7 @@ body {
   background-image: url(../images/astronaut\ 1.svg);
 }
 
-.special-big {
+.special__big {
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
@@ -343,8 +343,7 @@ body {
   color: var(--primary-text-color);
 }
 
-/* застосовано іншу специфічність css */
-.special .small {
+.special__small {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
@@ -395,11 +394,11 @@ body {
   background: var(--background-ourteam-color);
 }
 
-.team-item {
+.team-list__item {
   background-color: var(--background-img-team);
 }
 
-.ourteam-text {
+.ourteam__title {
   margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
@@ -415,7 +414,7 @@ body {
   margin-left: -30px;
 }
 
-.team-list > .team-item {
+.team-list > .team-list__item {
   margin-left: 30px;
   flex-basis: calc(25% - 30px);
 }
@@ -424,17 +423,17 @@ body {
 /* .team-list .team-item + .team-item {
   margin-left: 30px;
 } */
-.card {
+.team-list__card {
   border-radius: var(--border-radius-card-team);
   box-shadow: var(--box-shadow-ourteam);
 }
 
-.card-content {
+.team-list__card-content {
   text-align: center;
   padding: 30px 0px;
 }
 
-.teamtext-big {
+.team-list__teamtext-big {
   margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
@@ -442,7 +441,7 @@ body {
   color: var(--primary-text-color);
 }
 
-.teamtext-small {
+.team-list__teamtext-small {
   margin-bottom: 16px;
   font-weight: 400;
   font-size: 16px;
@@ -450,22 +449,22 @@ body {
   color: var(--second-text-color);
 }
 
-.masters-soc {
+.masters {
   display: flex;
   justify-content: center;
 }
 
-.masters-soc-item {
+.masters__item {
   width: 44px;
   height: 44px;
   margin-left: 10px;
 }
 
-.masters-soc-item:first-child {
+.masters__item:first-child {
   margin-left: 0;
 }
 
-.social-link {
+.masters__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -478,12 +477,12 @@ body {
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
 }
-.social-link:hover, .social-link:focus {
+.masters__link:hover, .masters__link:focus {
   background-color: var(--accent-color);
   color: var(--accent-color-text);
 }
 
-.soc-icon {
+.masters__icon {
   fill: currentColor;
 }
 
