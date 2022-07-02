@@ -5,7 +5,7 @@
   margin-left: calc(-1 * var(--box-cards-gap));
   margin-top: calc(-1 * var(--box-cards-gap));
 }
-.project > .box-cards {
+.project > .project-boxcards__item {
   margin-left: var(--box-cards-gap);
   margin-top: var(--box-cards-gap);
   flex-basis: calc(100% / 3 - var(--box-cards-gap));
@@ -13,7 +13,7 @@
   background: var(--background-box);
   border: var(--border-card-project-line);
 }
-.box-cards .link {
+.project-boxcards__link {
   display: block;
 
   transition-property: box-shadow;
@@ -26,12 +26,12 @@
   }
 }
 
-.project-thunb {
+.project__thunb {
   position: relative;
   overflow: hidden;
 }
 
-.project-subtext {
+.project__subtext {
   position: absolute;
   top: 0;
   height: 100%;
@@ -45,8 +45,8 @@
   transform: translateY(101%);
   transition: transform 250ms linear;
 
-  .box-cards:hover &,
-  .box-cards:focus & {
+  .project-boxcards__item:hover &,
+  .project-boxcards__item:focus & {
     transform: translateY(0);
   }
 }

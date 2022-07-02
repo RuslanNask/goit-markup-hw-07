@@ -1005,7 +1005,7 @@ body {
   margin-top: calc(-1 * var(--box-cards-gap));
 }
 
-.project > .box-cards {
+.project > .project-boxcards__item {
   margin-left: var(--box-cards-gap);
   margin-top: var(--box-cards-gap);
   flex-basis: calc(33.3333333333% - var(--box-cards-gap));
@@ -1013,22 +1013,22 @@ body {
   border: var(--border-card-project-line);
 }
 
-.box-cards .link {
+.project-boxcards__link {
   display: block;
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
 }
-.box-cards .link:hover, .box-cards .link:focus {
+.project-boxcards__link:hover, .project-boxcards__link:focus {
   box-shadow: var(--box-shadow-card-project);
 }
 
-.project-thunb {
+.project__thunb {
   position: relative;
   overflow: hidden;
 }
 
-.project-subtext {
+.project__subtext {
   position: absolute;
   top: 0;
   height: 100%;
@@ -1041,7 +1041,7 @@ body {
   transform: translateY(101%);
   transition: transform 250ms linear;
 }
-.box-cards:hover .project-subtext, .box-cards:focus .project-subtext {
+.project-boxcards__item:hover .project__subtext, .project-boxcards__item:focus .project__subtext {
   transform: translateY(0);
 }
 
@@ -1064,11 +1064,11 @@ body {
   gap: 30px;
 } */
 /*------------------ CARD SET PROJECT ---------------*/
-.card-content-project {
+.project__card-content {
   padding: 20px 24px;
 }
 
-.project-big {
+.project__bigtext {
   margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
@@ -1077,7 +1077,7 @@ body {
   color: var(--primary-text-color);
 }
 
-.project-small {
+.project__smalltext {
   font-size: 16px;
   line-height: 1.87;
   color: var(--second-text-color);
