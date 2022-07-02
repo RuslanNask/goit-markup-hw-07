@@ -4,3 +4,36 @@
   line-height: $lh;
   letter-spacing: $ls;
 }
+@mixin transition($one, $two, $three, $td, $ttf) {
+  transition-property: $one, $two, $three;
+  transition-duration: $td;
+  transition-timing-function: $ttf;
+}
+@mixin list($dsp, $fw, $m, $mr, $ml, $mt, $mb) {
+  display: $dsp;
+  flex-wrap: $fw;
+  margin: $m;
+  margin-right: $mr;
+  margin-left: $ml;
+  margin-top: $mt;
+  margin-bottom: $mb;
+}
+@mixin item($m, $mr, $ml, $mt, $mb, $q, $gap) {
+  margin: $m;
+  margin-right: $mr;
+  margin-left: $ml;
+  margin-top: $mt;
+  margin-bottom: $mb;
+  flex-basis: calc(100% / #{$q} - #{$gap});
+}
+@mixin section($pt, $pb) {
+  padding-top: $pt;
+  padding-bottom: $pb;
+}
+@mixin flex($ai, $jc, $fd, $fw) {
+  display: flex;
+  align-items: $ai;
+  justify-content: $jc;
+  flex-direction: $fd;
+  flex-wrap: $fw;
+}
