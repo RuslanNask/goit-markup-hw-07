@@ -1,14 +1,24 @@
 /* ------------ PROJECT - SITKA -----------*/
 .project {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: calc(-1 * var(--box-cards-gap));
-  margin-top: calc(-1 * var(--box-cards-gap));
+  @include list(
+    flex,
+    wrap,
+    null,
+    null,
+    calc(-1 * var(--box-cards-gap)),
+    calc(-1 * var(--box-cards-gap)),
+    null
+  );
+  // display: flex;
+  // flex-wrap: wrap;
+  // margin-left: calc(-1 * var(--box-cards-gap));
+  // margin-top: calc(-1 * var(--box-cards-gap));
 }
 .project > .project-boxcards__item {
-  margin-left: var(--box-cards-gap);
-  margin-top: var(--box-cards-gap);
-  flex-basis: calc(100% / 3 - var(--box-cards-gap));
+  @include item(null, null, var(--box-cards-gap), var(--box-cards-gap), null, 3, 30px);
+  // margin-left: var(--box-cards-gap);
+  // margin-top: var(--box-cards-gap);
+  // flex-basis: calc(100% / 3 - var(--box-cards-gap));
 
   background: var(--background-box);
   border: var(--border-card-project-line);

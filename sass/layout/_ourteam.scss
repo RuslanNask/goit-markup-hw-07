@@ -6,22 +6,25 @@
 }
 .ourteam__title {
   margin-bottom: 50px;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
   text-align: center;
+  @include font(700, 36px, 1.17, null);
+  // font-weight: 700;
+  // font-size: 36px;
+  // line-height: 1.17;
 
   color: var(--primary-text-color);
 }
 /* --------- CARD SET ------ OUR TEAM ---------*/
 .team-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;
+  @include list(flex, wrap, null, null, -30px, null, null);
+  // display: flex;
+  // flex-wrap: wrap;
+  // margin-left: -30px;
 }
 .team-list > .team-list__item {
-  margin-left: 30px;
-  flex-basis: calc(100% / 4 - 30px);
+  @include item(null, null, 30px, null, null, 4, 30px);
+  // margin-left: 30px;
+  // flex-basis: calc(100% / 4 - 30px);
 }
 /* або сусіди */
 /* .team-list .team-item + .team-item {
@@ -38,17 +41,19 @@
 }
 .team-list__teamtext-big {
   margin-bottom: 10px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.12;
+  @include font(500, 16px, 1.12, null);
+  // font-weight: 500;
+  // font-size: 16px;
+  // line-height: 1.12;
 
   color: var(--primary-text-color);
 }
 .team-list__teamtext-small {
   margin-bottom: 16px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.19;
+  @include font(400, 16px, 1.19, null);
+  // font-weight: 400;
+  // font-size: 16px;
+  // line-height: 1.19;
 
   color: var(--second-text-color);
 }
@@ -65,18 +70,20 @@
   margin-left: 0;
 }
 .masters__link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex(flex, center, center, null, null);
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
   width: 100%;
   height: 100%;
   border-radius: 50%;
   background-color: var(--accent-color-text);
   color: var(--icon-text);
 
-  transition-property: color, background-color;
-  transition-duration: 250ms;
-  transition-timing-function: var(--cubic);
+  @include transition(color, background-color, null, 250ms, var(--cubic));
+  // transition-property: color, background-color;
+  // transition-duration: 250ms;
+  // transition-timing-function: var(--cubic);
 
   &:hover,
   &:focus {

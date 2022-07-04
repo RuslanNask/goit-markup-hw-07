@@ -1,11 +1,13 @@
 .special__list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: calc(-1 * var(--box-cards-gap));
+  @include list(flex, wrap, null, null, calc(-1 * var(--box-cards-gap)), null, null);
+  // display: flex;
+  // flex-wrap: wrap;
+  // margin-left: calc(-1 * var(--box-cards-gap));
 }
 .special__list > .special__item {
-  margin-left: var(--box-cards-gap);
-  flex-basis: calc(100% / 4 - var(--box-cards-gap));
+  @include item(null, null, var(--box-cards-gap), null, null, 4, 30px);
+  // margin-left: var(--box-cards-gap);
+  // flex-basis: calc(100% / 4 - var(--box-cards-gap));
 }
 .special__item::before {
   display: block;
@@ -31,17 +33,18 @@
 }
 .special__big {
   margin-bottom: 10px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
+  @include font(700, 14px, 1.14, null);
+  // font-weight: 700;
+  // font-size: 14px;
+  // line-height: 1.14;
   text-transform: uppercase;
 
   color: var(--primary-text-color);
 }
 .special__small {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-
+  @include font(400, 14px, 1.71, null);
+  // font-weight: 400;
+  // font-size: 14px;
+  // line-height: 1.71;
   color: var(--second-text-color);
 }

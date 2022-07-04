@@ -1,8 +1,9 @@
 .header-nav.contact {
-  display: flex;
-  justify-content: center;
+  @include flex(flex, center, center, null, null);
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
   margin-left: auto;
-  align-items: center;
 }
 .header-nav__mail,
 .header-nav__tel {

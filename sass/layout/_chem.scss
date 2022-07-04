@@ -1,5 +1,5 @@
 .chem {
-  padding-top: 0px;
+  @include section(0, 94px);
 }
 .chem-text {
   margin-bottom: 50px;
@@ -20,9 +20,10 @@
   position: relative;
 }
 .chem-subtext {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex(flex, center, center, null, null);
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
   position: absolute;
   bottom: 0;
   width: 100%;
