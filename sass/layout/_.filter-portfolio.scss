@@ -12,18 +12,19 @@
 .buttons {
   margin-bottom: 0;
   padding: 6px 22px;
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62;
   cursor: pointer;
+  @include font2(inherit, 500, 16px, 26px, 0.03em, var(--primary-text-color));
+  // font-family: inherit;
+  // font-weight: 500;
+  // font-size: 16px;
+  // line-height: 26px;
+  // letter-spacing: 0.03em;
+  // color: var(--primary-text-color);
   border: 0px solid transparent;
-
-  color: var(--primary-text-color);
-
-  transition-property: color, background-color, box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: var(--cubic);
+  @include transition(color, background-color, box-shadow, 250ms, var(--cubic));
+  // transition-property: color, background-color, box-shadow;
+  // transition-duration: 250ms;
+  // transition-timing-function: var(--cubic);
 
   &:hover,
   &:focus {

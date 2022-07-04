@@ -336,7 +336,7 @@ body {
   border-radius: 4px;
   color: var(--accent-color-text);
   background-color: var(--background-buttom-accent);
-  transition-property: background-color, box-shadow;
+  transition-property: color, background-color, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
 }
@@ -404,11 +404,11 @@ body {
 }
 
 .chem-text {
-  font-weight: 700;
   margin-bottom: 50px;
+  text-align: center;
+  font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
-  text-align: center;
   color: var(--primary-text-color);
 }
 
@@ -800,10 +800,10 @@ body {
   transform: translate(-50%, -50%) scale(0) rotate(360deg);
 }
 .modal-title {
+  text-align: center;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
-  text-align: center;
   color: var(--primary-text-color);
 }
 
@@ -847,10 +847,10 @@ body {
   align-items: center;
   text-align: center;
   cursor: pointer;
-  box-shadow: var(--box-shadow-buttom-studio);
   border-radius: 4px;
   color: var(--accent-color-text);
   background-color: var(--background-buttom-accent);
+  box-shadow: var(--box-shadow-buttom-studio);
   transition-property: background-color, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
@@ -919,6 +919,14 @@ body {
 }
 .form-input:hover + .form-icon, .form-input:focus + .form-icon {
   fill: var(--accent-color);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
 }
 
 .form-field textarea {
@@ -1018,13 +1026,14 @@ body {
 .buttons {
   margin-bottom: 0;
   padding: 6px 22px;
+  cursor: pointer;
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.62;
-  cursor: pointer;
-  border: 0px solid transparent;
+  line-height: 1.625;
+  letter-spacing: 0.03em;
   color: var(--primary-text-color);
+  border: 0px solid transparent;
   transition-property: color, background-color, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
