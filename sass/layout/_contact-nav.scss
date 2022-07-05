@@ -1,12 +1,14 @@
-.header-nav.contact {
+.contact-nav {
   @include flex(flex, center, center, null, null);
   // display: flex;
   // align-items: center;
   // justify-content: center;
   margin-left: auto;
 }
-.header-nav__mail,
-.header-nav__tel {
+.contact-nav__item:not(:last-child) {
+  margin-right: 50px;
+}
+.contact-nav__link {
   display: inline-flex;
   align-items: center;
   padding: 32px 0;
@@ -28,7 +30,7 @@
     color: var(--accent-color);
   }
 }
-.header-nav__icon {
+.contact-nav__icon {
   margin-right: 10px;
   fill: currentColor;
 }

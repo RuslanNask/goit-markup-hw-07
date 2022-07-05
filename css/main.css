@@ -167,26 +167,34 @@ body {
   background: var(--background-header);
 }
 
-.header-navig__logo {
+.logo {
   font-family: "Raleway";
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
   padding: 24px 0 25px 0;
-  margin-right: 93px;
   color: var(--accent-color);
 }
 
-.header-navig__logo--black {
+.header__logo {
+  margin-right: 93px;
+}
+
+.header__logo--black {
   color: var(--primary-text-color);
 }
 
-.header-nav {
+.header__nav {
   display: flex;
   align-items: center;
 }
 
-.header-nav__item:not(:last-child) {
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav__item:not(:last-child) {
   margin-right: 50px;
 }
 
@@ -194,7 +202,7 @@ body {
 /* .header .header-item + .header-item {
   margin-left: 50px;
 } */
-.header-nav__link {
+.site-nav__link {
   position: relative;
   padding: 32px 0;
   font-weight: 500;
@@ -205,7 +213,7 @@ body {
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
 }
-.header-nav__link::after {
+.site-nav__link::after {
   content: "";
   position: absolute;
   display: block;
@@ -220,7 +228,7 @@ body {
   transform: scaleX(1);
   transition: transform 250ms var(--cubic), opacity 250ms var(--cubic);
 }
-.header-nav__link:hover::after, .header-nav__link:focus::after {
+.site-nav__link:hover::after, .site-nav__link:focus::after {
   content: "";
   position: absolute;
   display: block;
@@ -234,10 +242,10 @@ body {
   transform: scaleX(0);
 }
 
-.header-nav__link--current {
+.site-nav__link--current {
   color: var(--accent-color);
 }
-.header-nav__link--current::after {
+.site-nav__link--current::after {
   content: "";
   position: absolute;
   display: block;
@@ -250,20 +258,23 @@ body {
   background-color: var(--accent-color);
 }
 
-.header-nav__link:hover,
-.header-nav__link:focus {
+.site-nav__link:hover,
+.site-nav__link:focus {
   color: var(--accent-color);
 }
 
-.header-nav.contact {
+.contact-nav {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-left: auto;
 }
 
-.header-nav__mail,
-.header-nav__tel {
+.contact-nav__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.contact-nav__link {
   display: inline-flex;
   align-items: center;
   padding: 32px 0;
@@ -276,13 +287,11 @@ body {
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
 }
-.header-nav__mail:hover, .header-nav__mail:focus,
-.header-nav__tel:hover,
-.header-nav__tel:focus {
+.contact-nav__link:hover, .contact-nav__link:focus {
   color: var(--accent-color);
 }
 
-.header-nav__icon {
+.contact-nav__icon {
   margin-right: 10px;
   fill: currentColor;
 }
