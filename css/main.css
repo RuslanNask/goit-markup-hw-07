@@ -260,10 +260,10 @@ body {
   transform: scaleX(0);
 }
 
-.header-nav__link.current {
+.header-nav__link--current {
   color: var(--accent-color);
 }
-.header-nav__link.current::after {
+.header-nav__link--current::after {
   content: '';
   position: absolute;
   display: block;
