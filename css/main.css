@@ -202,7 +202,7 @@ body {
   color: var(--accent-color);
 }
 
-.header-navig__logoblack {
+.header-navig__logo--black {
   color: var(--primary-text-color);
 }
 
